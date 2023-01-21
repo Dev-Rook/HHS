@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Styles from "../Styles/Page-Section-Styles/Curriculas.module.scss";
 
+import SearchIcon from "@mui/icons-material/Search";
+
 import SkillsData from "../Data/Skills.json";
 
 const Skills = () => {
   const [data, setData] = useState(SkillsData);
-  const [visible, setVisible] = useState(6);
+  const [search, setSearch] = useState("");
 
   return (
     <div className={Styles.Section}>
@@ -18,9 +20,24 @@ const Skills = () => {
         </p>
       </div>
 
+      <div className={Styles.Input_Wrapper}>
+        <SearchIcon />
+        <input
+          type="text"
+          placeholder="Search Skill"
+          className={Styles.Nav_Input}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
+
       <div className={Styles.Content_Container}>
-        {data &&
-          data.map((value) => {
+        {data
+            ?.filter((item) => {
+              return search.toLowerCase() === ""
+                ? item
+                : item.Title.toLowerCase().includes(search) ;
+            })
+            .map((value) => {
             return (
               <Link to={"/Curricula/" + value.id} key={value.id}>
                 <div className={Styles.Card}>
@@ -32,7 +49,7 @@ const Skills = () => {
                     <p className={Styles.Teacher}>{value?.Tutors[0].Name}</p>
 
                     <p className={Styles.Description}>
-                    {value?.Description.slice(0, 130)}...
+                      {value?.Description.slice(0, 130)}...
                     </p>
                   </div>
                 </div>

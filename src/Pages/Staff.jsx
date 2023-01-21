@@ -33,9 +33,9 @@ const Staff = () => {
         <div className={Styles.Content_Container}>
           {data
             ?.filter((item) => {
-              return search.toLowerCase() == ""
+              return search.toLowerCase() === ""
                 ? item
-                : item.firstName.toLowerCase().includes(search) || item.title.toLowerCase().includes(search);
+                : item.firstName.toLowerCase().includes(search) || item.lastName.toLowerCase().includes(search);
             })
             .map((value) => {
               return (
