@@ -1,0 +1,217 @@
+.Section {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  justify-content: center;
+  align-items: left;
+
+  gap: 20px;
+
+  overflow: hidden;
+
+  height: 800px;
+  width: 100%;
+
+  .Content_Container {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+
+    gap: 0px;
+    padding: 5px;
+
+    justify-content: space-evenly;
+    align-items: left;
+
+    height: fit-content;
+    width: fit-content;
+
+    margin-left: 20px;
+    z-index: 5;
+
+    .Small_Text {
+      font-size: 18px;
+      font-weight: 100;
+      font-style: bold;
+      transition: 0.3s;
+    }
+
+    .Large_Text {
+      font-size: 60px;
+      font-weight: 100;
+      font-style: bold;
+      transition: 0.3s;
+    }
+
+    .Staff_Button {
+      border: 2px solid black;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 5px 20px;
+
+      color: white;
+
+      display: flex;
+      cursor: pointer;
+
+      justify-content: center;
+      align-items: center;
+
+      height: fit-content;
+      width: fit-content;
+
+      transition: 0.3s;
+    }
+  }
+
+  .Diffuser {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    z-index: 3;
+  }
+
+  .Slider_Container {
+    border: none;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    height: 100%;
+    width: 100%;
+
+    .Swiper {
+      border: none;
+
+      .Project_Card {
+        border: 1px solid white;
+
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        padding: 0;
+        gap: 0;
+
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+        width: 100%;
+
+        .Text_Container {
+          // border: 1px solid white;
+          // background-color: rgba(0, 0, 0, 0.5);
+          display: flex;
+          flex-direction: column;
+
+          color: white;
+
+          padding: 5px;
+          gap: 10px;
+
+          justify-content: center;
+          align-items: left;
+
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          z-index: 5;
+
+          .Name {
+            color: white;
+            font-size: 25px;
+            font-weight: 300;
+            font-style: bold;
+          }
+          .Title {
+            color: white;
+            font-size: 25px;
+            font-weight: 300;
+            font-style: bold;
+          }
+        }
+
+        .Diffuser {
+          background-color: rgba(0, 0, 0, 0.5);
+          display: flex;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          height: 100%;
+          width: 100%;
+
+          z-index: 2;
+        }
+
+        .Image_Container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+          z-index: 1;
+
+          .Image {
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+          }
+        }
+      }
+
+      .Project_Card:is(:hover, :focus) {
+        .Image_Container {
+          .Image {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries Start
+@media only screen and (max-width: 600px) {
+  .Section {
+    .Content_Container {
+      margin-left: 0px;
+      .Large_Text {
+        font-size: 40px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .Section {
+    .Content_Container {
+      .Small_Text {
+        font-size: 15px;
+      }
+      .Large_Text {
+        font-size: 30px;
+      }
+      .Project_Button {
+        padding: 2.5px 10px;
+      }
+    }
+  }
+}
+// Media Queries End

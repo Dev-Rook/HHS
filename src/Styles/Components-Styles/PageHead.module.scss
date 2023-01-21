@@ -1,0 +1,21 @@
+.PageHead {
+  display: flex;
+
+  border: 1px solid white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 500px;
+  width: 99%;
+
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .PageHead {
+    height: 300px;
+  }
+}

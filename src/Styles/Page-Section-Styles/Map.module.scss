@@ -1,0 +1,14 @@
+.Section {
+  display: flex;
+
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  height: 500px;
+  width: 99%;
+}

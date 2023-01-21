@@ -1,0 +1,19 @@
+.Page {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0px;
+  // gap: 100px;
+
+  justify-content: center;
+  align-items: center;
+
+  height: fit-content;
+  width: 1200px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Page {
+    width: 100%;
+  }
+}

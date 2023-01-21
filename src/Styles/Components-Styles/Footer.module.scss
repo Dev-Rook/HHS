@@ -1,0 +1,162 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  color: white;
+
+  padding: 5px;
+  gap: 10px;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 400px;
+  width: 100%;
+
+  .Information_Section {
+    display: flex;
+
+    gap: 100px;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 1000px;
+
+    .About_Box {
+      width: 40%;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+
+      .Title {
+        font-size: 25px;
+      }
+    }
+
+    .Information_Box {
+      width: 60%;
+      display: flex;
+
+      gap: 20px;
+
+      .Info_Column {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        height: fit-content;
+        width: fit-content;
+
+        .Column_Tile {
+          color: rgb(214, 71, 60);
+          font-size: 20px;
+          font-style: bold;
+          text-align: left;
+
+          margin: auto;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+
+        .Text {
+          color: lightgray;
+          margin: auto;
+          margin-left: 0px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .Navlink_Container {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 5px 5px;
+    gap: 6px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 100%;
+
+    .Navlink {
+      // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      // background-color: rgba(0, 0, 0, .7);
+      padding: 2px 2px;
+      color: white;
+      font-size: 17px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .Footer {
+    height: fit-content;
+    .Information_Section {
+      align-items: center;
+      width: 100%;
+      flex-direction: column;
+      gap: 30px;
+
+      .About_Box {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .Information_Box {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .Footer {
+    .Information_Section {
+      .About_Box {
+        width: 100%;
+      }
+
+      .Information_Box {
+        width: 100%;
+
+        .Column_Tile {
+          text-align: center;
+          margin: auto;
+          width: 100%;
+        }
+
+        .Text {
+          text-align: center;
+          margin: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Footer {
+    .Information_Section {
+      .Information_Box {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+}

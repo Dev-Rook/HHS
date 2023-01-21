@@ -1,0 +1,160 @@
+.Section {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  justify-content: center;
+  align-items: left;
+
+  gap: 20px;
+
+  padding: 5px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  height: fit-content;
+  width: 100%;
+  .Staff_Card_Section {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+    padding-bottom: 80px;
+    padding-top: 80px;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: fit-content;
+    width: 100%;
+
+    .Content_Container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+
+      justify-content: space-around;
+      align-items: center;
+
+      height: 100%;
+      width: 100%;
+
+      .Card {
+        border: 1px solid black;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 10px;
+
+        cursor: pointer;
+
+        height: fit-content;
+        min-height: 380px;
+        width: 100%;
+
+        .Image_Container {
+          position: relative;
+          display: flex;
+          overflow: hidden;
+          height: 300px;
+          width: 100%;
+
+          .Image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+
+          .Name {
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 2.5px 15px;
+
+            margin: auto;
+
+            color: white;
+            font-size: 14px;
+            font-weight: 300;
+          }
+        }
+
+        .Information_Container {
+          display: flex;
+          flex-direction: column;
+          color: black;
+
+          padding: 5px;
+          gap: 10px;
+
+          justify-content: space-evenly;
+          align-items: flex-start;
+
+          height: fit-content;
+          width: 100%;
+
+          .Title {
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+          .Bio {
+            font-size: 14px;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 696px) {
+  .Section {
+    .Staff_Card_Section {
+      .Content_Container {
+        grid-template-columns: 1fr 1fr;
+        .Card {
+          .Image_Container {
+            height: 200px;
+            .Name {
+              padding: 5px;
+              font-size: 14px;
+            }
+          }
+
+          .Title {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Section {
+    .Staff_Card_Section {
+      .Content_Container {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .Section {
+    .Staff_Card_Section {
+      .Content_Container {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

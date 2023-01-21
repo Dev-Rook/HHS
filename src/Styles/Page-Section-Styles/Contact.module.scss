@@ -1,0 +1,72 @@
+.Section {
+  display: flex;
+  flex-direction: column;
+
+  padding: 5px;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  height: fit-content;
+  width: 100%;
+
+  .Section_Title_Container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 5px;
+    gap: 30px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 800px;
+
+    transition: 0.5s;
+
+    .Title {
+      font-size: 50px;
+      font-weight: 200;
+      text-align: center;
+      transition: 0.5s;
+    }
+
+    .Description {
+      font-size: 18px;
+      font-weight: 200;
+      text-align: center;
+      transition: 0.5s;
+    }
+  }
+}
+
+// Media Queries Start
+
+@media only screen and (max-width: 810px) {
+  .Section {
+    .Section_Title_Container {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .Section {
+    .Section_Title_Container {
+      .Title {
+        font-size: 35px;
+      }
+      .Description {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// Media Queries End

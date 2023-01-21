@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "Icon": "",
+        "Title": "Great Facilities",
+        "Description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    },
+    {
+        "id": 2,
+        "Icon": "",
+        "Title": "Qualiified Educators",
+        "Description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    },
+    {
+        "id": 3,
+        "Icon": "",
+        "Title": "Sport & Clubs",
+        "Description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    },
+    {
+        "id": 4,
+        "Icon": "",
+        "Title": "Music & Art Studios",
+        "Description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    },
+    {
+        "id": 5,
+        "Icon": "",
+        "Title": "Cadet",
+        "Description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+    }
+]

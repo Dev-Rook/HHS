@@ -1,0 +1,196 @@
+.Section {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  justify-content: center;
+  align-items: left;
+
+  gap: 20px;
+
+  padding: 5px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  height: fit-content;
+  width: 100%;
+
+  .Section_Title_Container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 100%;
+    .Question {
+      font-size: 18px;
+      font-weight: 100;
+      font-style: bold;
+      transition: 0.3s;
+    }
+
+    .Section_Title {
+      font-size: 50px;
+      font-weight: 100;
+      font-style: bold;
+      transition: 0.3s;
+    }
+  }
+
+  .Content_Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+    position: relative;
+
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    .Card {
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid black;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      position: relative;
+
+      padding: 0px;
+      gap: 0px;
+      overflow: hidden;
+
+      height: 250px;
+      width: 100%;
+
+      transition: 0.3s;
+
+      .Preview_Container {
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .Title {
+          display: flex;
+
+          justify-content: center;
+          align-items: center;
+
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+
+          font-size: 18px;
+          font-weight: 300;
+        }
+
+        .Preview {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          transition: 0.5s;
+        }
+      }
+
+      .Description_Container {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
+        width: 100%;
+
+        position: absolute;
+
+        z-index: 3;
+        transition: 0.6s;
+        transform: translateY(100vh);
+
+        .Description {
+          color: white;
+          font-size: 14px;
+          font-weight: 100;
+          text-align: center;
+        }
+      }
+    }
+    .Card:hover {
+      transform: translateY(-5px);
+      .Preview_Container {
+        .Preview {
+          transform: scale(1.1);
+          backdrop-filter: 5px;
+        }
+      }
+      .Description_Container {
+        transform: translateY(0%);
+      }
+    }
+  }
+
+  .View_More_Button {
+    padding: 5px 20px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    height: fit-content;
+    width: fit-content;
+
+    margin: auto;
+    margin-top: 20px;
+
+    font-size: 18px;
+  }
+}
+// Media Queries Start
+@media only screen and (max-width: 996px) {
+  .Section {
+    .Section_Title_Container {
+      .Section_Title {
+        font-size: 30px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .Section {
+    .Content_Container {
+      grid-template-columns: 1fr 1fr;
+      .Card {
+        height: 200px;
+        .Title {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .Section {
+    .Section_Title_Container {
+      .Section_Title {
+        font-size: 30px;
+      }
+    }
+  }
+}
+// Media Queries End

@@ -1,0 +1,162 @@
+.Section {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  justify-content: center;
+  align-items: left;
+
+  gap: 20px;
+
+  padding: 5px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  height: fit-content;
+  width: 100%;
+
+  .Section_Title_Container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 100%;
+    .Question {
+      font-size: 18px;
+      font-weight: 100;
+      font-style: bold;
+      transition: 0.3s;
+    }
+
+    .Section_Title {
+      font-size: 50px;
+      font-weight: 100;
+      font-style: bold;
+      transition: 0.3s;
+      text-align: center;
+    }
+  }
+
+  .Sponsor_Grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 100%;
+
+    .Card {
+      border: 1px solid black;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color: rgb(32, 33, 35);
+
+      display: flex;
+
+      padding: 5px 10px;
+      gap: 10px;
+
+      cursor: pointer;
+
+      justify-content: center;
+      align-items: center;
+
+      height: fit-content;
+      width: 200px;
+
+      margin: auto;
+
+      transition: 0.3s ease-in-out;
+
+      .Icon {
+        height: 30px;
+        margin: auto;
+      }
+
+      .Title {
+        color: white;
+        margin: auto;
+        font-size: 14px;
+      }
+    }
+
+    .Card:is(:hover) {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Media Queries Start
+@media only screen and (max-width: 996px) {
+  .Section {
+    .Section_Title_Container {
+      .Section_Title {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .Section {
+    .Sponsor_Grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-gap: 10px;
+      .Card {
+        flex-direction: column;
+        width: 100px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .Section {
+    .Section_Title_Container {
+      .Section_Title {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  .Section {
+    .Sponsor_Grid {
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      grid-gap: 5px;
+      .Card {
+        flex-direction: column;
+        width: 80px;
+
+        .Title {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .Section {
+    .Content_Container {
+      .Description {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+// Media Queries End

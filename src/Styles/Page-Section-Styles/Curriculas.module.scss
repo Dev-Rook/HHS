@@ -1,0 +1,205 @@
+.Section {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  justify-content: center;
+  align-items: left;
+
+  gap: 20px;
+
+  padding: 5px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  height: fit-content;
+  width: 100%;
+
+  .Section_Title {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+    width: 100%;
+    .Question {
+      font-size: 18px;
+      font-weight: 100;
+      font-style: bold;
+      transition: 0.3s;
+    }
+
+    .Brand {
+      font-size: 50px;
+      font-weight: 100;
+      font-style: bold;
+      text-align: center;
+      transition: 0.3s;
+    }
+  }
+
+  .Content_Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    .Card {
+      border: 1px solid black;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      
+      display: flex;
+      flex-direction: column;
+
+      padding: 0px;
+      gap: 0px;
+      overflow: hidden;
+
+      height: fit-content;
+      width: 100%;
+
+      transition: 0.5s;
+
+      .Image_Container {
+        height: 200px;
+        width: 100%;
+
+        display: flex;
+
+        position: relative;
+
+        .Category {
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 5px;
+
+          display: flex;
+
+          justify-content: center;
+          align-items: center;
+
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+
+          color: white;
+          font-size: 15px;
+          font-weight: 300;
+        }
+
+        .Image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .Information_Box {
+        border: 1px solid black;
+
+        display: flex;
+        flex-direction: column;
+        color: black;
+
+        padding: 5px;
+        gap: 10px;
+
+        justify-content: space-evenly;
+        align-items: flex-start;
+
+        height: fit-content;
+        width: 100%;
+
+        .Teacher_Label {
+          font-size: 16px;
+          color: blue;
+        }
+
+        .Date_Label {
+          font-size: 16px;
+          color: red;
+        }
+
+        .Requirements_Label {
+          font-size: 16px;
+          color: green;
+        }
+
+        .Teacher,
+        .Date,
+        .Description,
+        .Requirements {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .Card:is(:hover, :focus) {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+// Media Queries Start
+@media only screen and (max-width: 996px) {
+  .Section {
+    .Section_Title {
+      .Brand {
+        font-size: 30px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .Section {
+    .Content_Container {
+      grid-template-columns: 1fr 1fr;
+      .Card {
+        // height: 200px;
+
+        .Information_Box {
+          .Teacher,
+          .Date,
+          .Description,
+          .Requirements {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+// @media only screen and (max-width: 600px) {
+// .Section {
+
+// }
+// }
+@media only screen and (max-width: 550px) {
+  .Section {
+    .Content_Container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .Section {
+    .Section_Title {
+      .Brand {
+        font-size: 25px;
+      }
+    }
+  }
+}
+// Media Queries End
