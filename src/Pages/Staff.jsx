@@ -40,7 +40,7 @@ const Staff = () => {
             .map((value) => {
               return (
                 <Link to={"/Staffer/" + value.id} key={value.id}>
-                  <div className={Styles.Card}>
+                  <div className={Styles.Card}> 
                     <div className={Styles.Image_Container}>
                       <p className={Styles.Name}>
                         {value.firstName} {value.lastName}
