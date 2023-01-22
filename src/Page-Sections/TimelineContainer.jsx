@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "../Styles/Page-Section-Styles/TimelineContainer.module.scss";
+import Styles from "../Styles/Page-Section-Styles/TimeLineContainer.module.scss";
 
 import TimelineAlternate from "../Components/Secondary/TimelineAlternate";
 import TimelineRight from "../Components/Secondary/TimelineRight";
