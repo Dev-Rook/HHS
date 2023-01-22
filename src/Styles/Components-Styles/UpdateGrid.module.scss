@@ -1,0 +1,77 @@
+.Section {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  justify-content: center;
+  align-items: left;
+
+  gap: 20px;
+
+  padding: 5px;
+
+  overflow: hidden;
+
+  height: fit-content;
+  width: 100%;
+
+  .Content_Container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+    justify-content: space-around;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+
+    .Update_Card {
+      display: flex;
+      flex-direction: column;
+
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color: rgb(28, 29, 31);
+      border-radius: 5px;
+
+      color: white;
+
+      padding: 10px;
+      gap: 15px;
+      cursor: pointer;
+
+      height: fit-content;
+      width: 100%;
+
+      .Image_Container {
+        height: 300px;
+        height: 250px;
+
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+
+        .Image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .Information_Box {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+        justify-content: space-evenly;
+        align-items: flex-start;
+      }
+    }
+  }
+}

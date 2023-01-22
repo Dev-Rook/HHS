@@ -8,7 +8,6 @@ import Styles from "../Styles/Page-Section-Styles/StaffSection.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, Autoplay, Mousewheel } from "swiper";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -77,18 +76,20 @@ const StaffSection = () => {
                   <Link to={"/Staffer/" + value.id} className={Styles.Link}>
                     <div className={Styles.Project_Card}>
                       <div className={Styles.Text_Container}>
-                        <p className={Styles.Name}>{value?.firstName} {value?.lastName}</p>
+                        <p className={Styles.Name}>
+                          {value?.firstName} {value?.lastName}
+                        </p>
                         <p className={Styles.Title}>{value?.title}</p>
                       </div>
                       <div className={Styles.Diffuser}></div>
                       <div className={Styles.Image_Container}>
-                        {value?.image?.url ? (
+                        {
                           <img
                             src={`https://hhs-backen-76xny.ondigitalocean.app${value?.image?.url}`}
                             alt=""
                             className={Styles.Image}
                           />
-                        ) : null}
+                        }
                       </div>
                     </div>
                   </Link>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAxios from "../../Hooks/useAxios";
-import Styles from "../../Styles/Components-Styles/StaffGrid.module.scss";
+import Styles from "../../Styles/Components-Styles/CurriculaGrid.module.scss";
 
 import SearchIcon from "@mui/icons-material/Search";
 
-const StaffGrid = () => {
-  const url = `https://hhs-backen-76xny.ondigitalocean.app/staffs`;
+const CurriculaSinglle = () => {
+  const url = `https://hhs-backen-76xny.ondigitalocean.app/curricula`;
   const { data, error, loading } = useAxios(url);
 
   const [backToTop, setBackToTop] = useState(false);
@@ -31,28 +31,27 @@ const StaffGrid = () => {
 
   return (
     <div className={Styles.Section}>
+      <div className={Styles.Input_Wrapper}>
+        <SearchIcon />
+        <input
+          type="text"
+          placeholder="Search Skill"
+          className={Styles.Nav_Input}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
       <div className={Styles.Staff_Card_Section}>
-        <div className={Styles.Input_Wrapper}>
-          <SearchIcon />
-          <input
-            type="text"
-            placeholder="Search Skill"
-            className={Styles.Nav_Input}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
         <div className={Styles.Content_Container}>
           {data
             ?.filter((item) => {
               return search.toLowerCase() === ""
                 ? item
-                : item.firstName.toLowerCase().includes(search) ||
-                    item.lastName.toLowerCase().includes(search);
+                : item.title.toLowerCase().includes(search);
             })
             .map((value) => {
               return (
                 <Link
-                  to={"/Staffer/" + value.id}
+                  to={"/Curricula/" + value.id}
                   onClick={scrollUp}
                   key={value.id}
                 >
@@ -71,7 +70,9 @@ const StaffGrid = () => {
                     </div>
                     <div className={Styles.Information_Container}>
                       <p className={Styles.Title}>{value.title}</p>
-                      <p className={Styles.Bio}>{value.bio.slice(0, 120)}...</p>
+                      <p className={Styles.Bio}>
+                        {value.description.slice(0, 120)}...
+                      </p>
                     </div>
                   </div>
                 </Link>
@@ -83,4 +84,4 @@ const StaffGrid = () => {
   );
 };
 
-export default StaffGrid;
+export default CurriculaSinglle;

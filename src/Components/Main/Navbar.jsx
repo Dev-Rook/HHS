@@ -52,16 +52,16 @@ const Navbar = () => {
           <Link to={"About"} onClick={scrollUp} className={Styles.Navlink}>
             About
           </Link>
-          <Link to={"Curricula"} onClick={scrollUp} className={Styles.Navlink}>
-            Curricula
+          <Link to={"Curriculas"} onClick={scrollUp} className={Styles.Navlink}>
+            Curriculas
           </Link>
-          <Link to={"/"} onClick={scrollUp} className={Styles.Navlink}>
+          <Link to={"Documents"} onClick={scrollUp} className={Styles.Navlink}>
             Documents
           </Link>
-          <Link to={"/"} onClick={scrollUp} className={Styles.Navlink}>
+          <Link to={"Updates"} onClick={scrollUp} className={Styles.Navlink}>
             Updates
           </Link>
-          <Link to={"/"} onClick={scrollUp} className={Styles.Navlink}>
+          <Link to={"Apply"} onClick={scrollUp} className={Styles.Navlink}>
             Apply
           </Link>
         </div>

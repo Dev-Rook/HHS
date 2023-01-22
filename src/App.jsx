@@ -9,12 +9,17 @@ import Footer from "./Components/Main/Footer";
 const Home = lazy(() => import("./Pages/Home"));
 const Curricula = lazy(() => import("./Pages/Curricula"));
 const Staff = lazy(() => import("./Pages/Staff"));
+const About = lazy(() => import("./Pages/About"));
+const Updates = lazy(() => import("./Pages/Updates"));
+const Fallback = lazy(() => import("./Pages/Fallback"));
 const Error = lazy(() => import("./Pages/Error"));
 // Page Import End
 
 // Dynamic Page Imports Start
 const StaffSingle = lazy(() => import("./Dynamic-Pages/StaffSingle.jsx"));
-const CurriculaSingle = lazy(() => import("./Dynamic-Pages/CurriculaSingle.jsx"));
+const CurriculaSingle = lazy(() =>
+  import("./Dynamic-Pages/CurriculaSingle.jsx")
+);
 const UpdateSingle = lazy(() => import("./Dynamic-Pages/UpdateSingle.jsx"));
 // Dynamic Page Imports End
 
@@ -42,11 +47,13 @@ const App = () => {
     <div className={Styles.App}>
       <BrowserRouter>
         <Navbar />
-        <Suspense fallback={""}>
+        <Suspense fallback={<Fallback />}>
           <Routes>
             <Route path={"/"} element={<Home />} />
-            <Route path={"Curricula"} element={<Curricula />} />
+            <Route path={"Curriculas"} element={<Curricula />} />
             <Route path={"Staff"} element={<Staff />} />
+            <Route path={"About"} element={<About />} />
+            <Route path={"Updates"} element={<Updates />} />
             <Route path={"*"} element={<Error />} />
 
             {/* Dynamic Routes */}

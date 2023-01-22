@@ -13,8 +13,7 @@ const Tour = () => {
       </div>
 
       <div className={Styles.Content_Container}>
-        {data &&
-          data.map((value) => {
+        {data?.slice(0, 3).map((value) => {
             return (
               <a
                 href={value.Link}

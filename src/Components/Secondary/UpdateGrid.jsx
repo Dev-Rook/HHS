@@ -1,22 +1,38 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
-import useAxios from "../Hooks/useAxios";
-import Styles from "../Styles/Page-Section-Styles/UpdateSection.module.scss";
+import useAxios from "../../Hooks/useAxios";
+import Styles from "../../Styles/Components-Styles/UpdateGrid.module.scss";
 
-const UpdateSection = () => {
+const UpdateGrid = () => {
   const url = `https://hhs-backen-76xny.ondigitalocean.app/events`;
   const { data, error, loading } = useAxios(url);
 
+  const [backToTop, setBackToTop] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        setBackToTop(true);
+      } else {
+        setBackToTop(false);
+      }
+    });
+  }, []);
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={Styles.Section}>
-      <div className={Styles.Section_Title_Container}>
-        <p className={Styles.Question}>- Updates</p>
-        <p className={Styles.Section_Title}>Latest School Updates</p>
-      </div>
-      <div className={Styles.Content_Container}>
-        {data?.slice(0, 3).map((value) => {
-          return (
-            <Link to={"/Update/" + value.id} key={value.id}>
+      <div className={Styles.Staff_Card_Section}>
+        <div className={Styles.Content_Container}>
+          {data?.map((value) => {
+            return (
+              <Link to={"/Update/" + value.id} onClick={scrollUp} key={value.id}>
               <div className={Styles.Update_Card}>
                 <div className={Styles.Image_Container}>
                   {value?.image?.url ? (
@@ -32,16 +48,13 @@ const UpdateSection = () => {
                   <p className={Styles.Tite}>{value?.title}</p>
                 </div>
               </div>
-            </Link>
-          );
-        })}
+              </Link>
+            );
+          })}
+        </div>
       </div>
-
-      <Link className={Styles.Link} to={"Updates"}>
-        <button className={Styles.View_More_Button}>View All</button>
-      </Link>
     </div>
   );
 };
 
-export default UpdateSection;
+export default UpdateGrid;
