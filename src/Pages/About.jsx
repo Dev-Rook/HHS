@@ -15,8 +15,6 @@ const About = () => {
   TabTitle("HHS | About");
   return (
     <div className={Styles.Page}>
-      {/* <PageHead Title={"About"} /> */}
-
       <div className={Styles.Section}>
         <div className={Styles.Content_Container}>
           <div className={Styles.About_Container}>
