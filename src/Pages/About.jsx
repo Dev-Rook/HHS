@@ -2,9 +2,9 @@ import React from "react";
 import Styles from "../Styles/Page-Styles/About.module.scss";
 
 import { TabTitle } from "../Utilities/TabTitle";
-import PageHead from "../Components/Main/PageHead";
 
-import TimeLineContainer from "../Page-Sections/TimeLineContainer";
+
+import TimeLineContainer from "../Page-Sections/TimelineContainer";
 import Tour from "../Page-Sections/Tour";
 import StaffSection from "../Page-Sections/StaffSection";
 import Sponsors from "../Page-Sections/Sponsors";
