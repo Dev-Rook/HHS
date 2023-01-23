@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useScrollUp } from "../../Hooks/useScrollUp";
 import useAxios from "../../Hooks/useAxios";
 import Styles from "../../Styles/Components-Styles/StaffGrid.module.scss";
 
@@ -11,23 +12,7 @@ const StaffGrid = () => {
 
   const [backToTop, setBackToTop] = useState(false);
   const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        setBackToTop(true);
-      } else {
-        setBackToTop(false);
-      }
-    });
-  }, []);
-
-  const scrollUp = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const {scrollUp} = useScrollUp();
 
   return (
     <div className={Styles.Section}>

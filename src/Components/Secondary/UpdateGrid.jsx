@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import useAxios from "../../Hooks/useAxios";
+import { useScrollUp } from "../../Hooks/useScrollUp";
 import Styles from "../../Styles/Components-Styles/UpdateGrid.module.scss";
 
 const UpdateGrid = () => {
@@ -8,23 +9,7 @@ const UpdateGrid = () => {
   const { data, error, loading } = useAxios(url);
 
   const [backToTop, setBackToTop] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        setBackToTop(true);
-      } else {
-        setBackToTop(false);
-      }
-    });
-  }, []);
-
-  const scrollUp = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const {scrollUp} = useScrollUp();
 
   return (
     <div className={Styles.Section}>

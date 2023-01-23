@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { TabTitle } from "../Utilities/TabTitle";
 import { Link } from "react-router-dom";
+import { useScrollUp } from "../../Hooks/useScrollUp";
 import Styles from "../Styles/Page-Styles/Updates.module.scss";
 
 import PageHead from "../Components/Main/PageHead";
@@ -13,23 +14,7 @@ const Updates = () => {
   const { data, error, loading } = useAxios(url);
 
   const [backToTop, setBackToTop] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        setBackToTop(true);
-      } else {
-        setBackToTop(false);
-      }
-    });
-  }, []);
-
-  const scrollUp = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  const {scrollUp} = useScrollUp();
 
   return (
     <div className={Styles.Page}>

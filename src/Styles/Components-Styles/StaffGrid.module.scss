@@ -50,6 +50,7 @@
     flex-direction: column;
 
     padding: 5px;
+    gap: 20px;
 
     justify-content: space-evenly;
     align-items: center;
@@ -82,7 +83,7 @@
         cursor: pointer;
 
         height: fit-content;
-        min-height: 380px;
+        // min-height: 380px;
         width: 330px;
 
         margin: auto;

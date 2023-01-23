@@ -2,11 +2,13 @@ import React from "react";
 import { TabTitle } from "../Utilities/TabTitle";
 import { Link, useParams } from "react-router-dom";
 import useAxios from "../Hooks/useAxios";
+import { useScrollUp } from "../Hooks/useScrollUp";
 import Styles from "../Styles/Dynamic-Page-Styles/ContentSingle.module.scss";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 import StaffGrid from "../Components/Secondary/StaffGrid";
+import { useScroll } from "framer-motion";
 
 const StaffSingle = () => {
   TabTitle("HSS | Staffer ");
@@ -14,6 +16,8 @@ const StaffSingle = () => {
 
   const url = `https://hhs-backen-76xny.ondigitalocean.app/staffs/${id}`;
   const { data, error, loading } = useAxios(url);
+
+  const {scrollUp} = useScrollUp
 
   return (
     <div className={Styles.Page}>
