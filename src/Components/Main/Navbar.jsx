@@ -76,7 +76,7 @@ const Navbar = () => {
           <InstagramIcon />
         </div>
         |
-        <BrightnessMediumIcon />
+        {/* <BrightnessMediumIcon /> */}
         <span className={Styles.Span}>
           <Hamburger
             className={Styles.HamburgerMenu}

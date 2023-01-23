@@ -2,6 +2,7 @@
   display: flex;
 
   background-color: rgba(36, 36, 36, 1);
+  background-color: #2e152f;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   backdrop-filter: 5px;
 
@@ -81,6 +82,7 @@
   .Mobile_Menu {
     display: none;
     background-color: rgba(0, 0, 0, 1);
+    background-color: #2e152f;
     backdrop-filter: blur(10px);
 
     position: absolute;
@@ -111,7 +113,7 @@
       .ListGroupItem {
         background-color: rgba(0, 0, 0, 0);
 
-        color: white;
+        color: gold;
         font-size: 30px;
         font-weight: 500;
 

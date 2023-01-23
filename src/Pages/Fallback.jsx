@@ -8,7 +8,7 @@ const Fallback = () => {
   return (
     <div className={Styles.Page}>
       <Box className={Styles.Box} sx={{ display: "flex" }}>
-        <CircularProgress />
+        <CircularProgress sx={{color: "white"}} />
       </Box>
     </div>
   );

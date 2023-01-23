@@ -4,7 +4,7 @@ import Styles from "../Styles/Page-Styles/About.module.scss";
 import { TabTitle } from "../Utilities/TabTitle";
 
 
-// import TimeLineContainer from "../Page-Sections/TimelineContainer";
+import TimeLineContainer from "../Page-Sections/TimelineContainer";
 import Tour from "../Page-Sections/Tour";
 import StaffSection from "../Page-Sections/StaffSection";
 import Sponsors from "../Page-Sections/Sponsors";
@@ -34,7 +34,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* <TimeLineContainer /> */}
+      <TimeLineContainer />
       <Tour />
       <StaffSection />
       <Sponsors />

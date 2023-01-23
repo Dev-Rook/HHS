@@ -12,6 +12,7 @@ const Staff = lazy(() => import("./Pages/Staff"));
 const About = lazy(() => import("./Pages/About"));
 const Updates = lazy(() => import("./Pages/Updates"));
 const Documents = lazy(() => import("./Pages/Documents"));
+const Apply = lazy(() => import("./Pages/Apply"));
 const Fallback = lazy(() => import("./Pages/Fallback"));
 const Error = lazy(() => import("./Pages/Error"));
 // Page Import End
@@ -56,6 +57,7 @@ const App = () => {
             <Route path={"About"} element={<About />} />
             <Route path={"Updates"} element={<Updates />} />
             <Route path={"Documents"} element={<Documents />} />
+            <Route path={"Apply"} element={<Apply />} />
             <Route path={"*"} element={<Error />} />
 
             {/* Dynamic Routes */}
