@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAxios from "../../Hooks/useAxios";
-import Styles from "../../Styles/Components-Styles/CurriculaGrid.module.scss";
+import Styles from "../../Styles/Components-Styles/DocumentGrid.module.scss";
 
 import SearchIcon from "@mui/icons-material/Search";
 
-const CurriculaGrid = () => {
-  const url = `https://hhs-backen-76xny.ondigitalocean.app/curricula`;
+const DocumentGrid = () => {
+  const url = `https://hhs-backen-76xny.ondigitalocean.app/documents`;
   const { data, error, loading } = useAxios(url);
 
   const [backToTop, setBackToTop] = useState(false);
@@ -84,4 +84,5 @@ const CurriculaGrid = () => {
   );
 };
 
-export default CurriculaGrid;
+export default DocumentGrid;
+

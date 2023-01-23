@@ -52,7 +52,7 @@ const Updates = () => {
                 </div>
                 <div className={Styles.Information_Box}>
                   <p className={Styles.Text}>{value?.date}</p>
-                  <p className={Styles.Tite}>{value?.title}</p>
+                  <p className={Styles.Text}>{value?.title}</p>
                 </div>
               </div>
             </Link>

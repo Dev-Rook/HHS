@@ -11,6 +11,7 @@ const Curricula = lazy(() => import("./Pages/Curricula"));
 const Staff = lazy(() => import("./Pages/Staff"));
 const About = lazy(() => import("./Pages/About"));
 const Updates = lazy(() => import("./Pages/Updates"));
+const Documents = lazy(() => import("./Pages/Documents"));
 const Fallback = lazy(() => import("./Pages/Fallback"));
 const Error = lazy(() => import("./Pages/Error"));
 // Page Import End
@@ -54,6 +55,7 @@ const App = () => {
             <Route path={"Staff"} element={<Staff />} />
             <Route path={"About"} element={<About />} />
             <Route path={"Updates"} element={<Updates />} />
+            <Route path={"Documents"} element={<Documents />} />
             <Route path={"*"} element={<Error />} />
 
             {/* Dynamic Routes */}

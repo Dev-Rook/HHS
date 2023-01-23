@@ -38,8 +38,8 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      height: 400px;
-      width: 400px;
+      height: 200px;
+      width: 200px;
 
       overflow: hidden;
 
@@ -140,10 +140,6 @@
   .Section {
     height: fit-content;
     .Content_Container {
-      .Image_Container {
-        height: 300px;
-        width: 300px;
-      }
       .About_Container {
         width: 100%;
         align-items: center;
@@ -162,11 +158,6 @@
 @media only screen and (max-width: 360px) {
   .Section {
     .Content_Container {
-      .Image_Container {
-        height: 250px;
-        width: 250px;
-      }
-
       .About_Container {
         .Question {
           font-size: 12px;
