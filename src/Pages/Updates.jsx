@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { TabTitle } from "../Utilities/TabTitle";
 import { Link } from "react-router-dom";
-import { useScrollUp } from "../../Hooks/useScrollUp";
+import { useScrollUp } from "../Hooks/useScrollUp";
 import Styles from "../Styles/Page-Styles/Updates.module.scss";
 
 import PageHead from "../Components/Main/PageHead";

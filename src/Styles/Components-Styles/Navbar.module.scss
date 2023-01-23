@@ -76,6 +76,104 @@
       z-index: 110;
     }
   }
+
+  //   Mobile Menu Start
+  .Mobile_Menu {
+    display: none;
+    background-color: rgba(0, 0, 0, 1);
+    backdrop-filter: blur(10px);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    // overflow: scroll;
+    z-index: 11;
+    transition: 0.5s;
+    transform: translateY(100vh);
+
+    .ListGroup {
+      border-radius: 0;
+
+      gap: 1px;
+
+      justify-content: space-between;
+
+      height: 60%;
+      width: 60%;
+
+      .ListGroupItem {
+        background-color: rgba(0, 0, 0, 0);
+
+        color: white;
+        font-size: 30px;
+        font-weight: 500;
+
+        border: none;
+        // border: 1px solid rgba(255, 255, 255, .1);
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 10px;
+      }
+    }
+
+    .Contact_Information_Box {
+      border-radius: 0;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 20px;
+      padding: 5px;
+
+      justify-content: center;
+      align-items: flex-start;
+
+      height: 60%;
+      width: 40%;
+
+      .Contact_item {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        height: fit-content;
+        width: fit-content;
+
+        .Title {
+          color: rgb(120, 48, 50);
+          font-size: 20px;
+          font-style: bold;
+          text-align: left;
+
+          margin: auto;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+
+        .Text {
+          color: lightgray;
+          margin: auto;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  //   Mobile Menu End
+
+  .Reveal {
+    transform: translateY(0%);
+  }
 }
 
 @media only screen and (max-width: 996px) {
@@ -92,6 +190,38 @@
       }
       .Span {
         display: flex;
+      }
+    }
+
+    .Mobile_Menu {
+      display: flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Navbar {
+    .Mobile_Menu {
+      .ListGroup {
+        width: 100%;
+      }
+      .Contact_Information_Box {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Navbar {
+    padding: 10px;
+    .Mobile_Menu {
+      .ListGroup {
+        height: 90%;
+
+        .ListGroupItem {
+          font-size: 25px;
+        }
       }
     }
   }
