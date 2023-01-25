@@ -52,12 +52,12 @@ const App = () => {
         <Suspense fallback={<Fallback />}>
           <Routes>
             <Route path={"/"} element={<Home />} />
-            <Route path={"Curriculas"} element={<Curricula />} />
-            <Route path={"Staff"} element={<Staff />} />
-            <Route path={"About"} element={<About />} />
-            <Route path={"Updates"} element={<Updates />} />
-            <Route path={"Documents"} element={<Documents />} />
-            <Route path={"Apply"} element={<Apply />} />
+            <Route path={"/Curriculas"} element={<Curricula />} />
+            <Route path={"/Staff"} element={<Staff />} />
+            <Route path={"/About"} element={<About />} />
+            <Route path={"/Updates"} element={<Updates />} />
+            <Route path={"/Documents"} element={<Documents />} />
+            <Route path={"/Apply"} element={<Apply />} />
             <Route path={"*"} element={<Error />} />
 
             {/* Dynamic Routes */}
