@@ -113,7 +113,7 @@ const Navbar = () => {
           <Link
             onClick={doubleFunction}
             className={Styles.Navlink}
-            to={"Curricula"}
+            to={"Curriculas"}
           >
             <ListGroup.Item className={Styles.ListGroupItem}>
               {/* <AssignmentIcon sx={{ color: "White", fontSize: 25 }} /> */}
