@@ -54,7 +54,11 @@ const Navbar = () => {
           <Link to={"/About"} onClick={scrollUp} className={Styles.Navlink}>
             About
           </Link>
-          <Link to={"/Curriculas"} onClick={scrollUp} className={Styles.Navlink}>
+          <Link
+            to={"/Curriculas"}
+            onClick={scrollUp}
+            className={Styles.Navlink}
+          >
             Curriculas
           </Link>
           <Link to={"/Documents"} onClick={scrollUp} className={Styles.Navlink}>
@@ -92,9 +96,7 @@ const Navbar = () => {
       <div className={`${Styles.Mobile_Menu} ${menu ? Styles.Reveal : ""}`}>
         <ListGroup className={Styles.ListGroup}>
           <Link onClick={doubleFunction} className={Styles.Navlink} to={"/"}>
-            <ListGroup.Item className={Styles.ListGroupItem}>
-              Home
-            </ListGroup.Item>
+            Home
           </Link>
 
           <Link
@@ -102,9 +104,7 @@ const Navbar = () => {
             className={Styles.Navlink}
             to={"/About"}
           >
-            <ListGroup.Item className={Styles.ListGroupItem}>
-              About
-            </ListGroup.Item>
+            About
           </Link>
 
           <Link
@@ -112,9 +112,7 @@ const Navbar = () => {
             className={Styles.Navlink}
             to={"/Curriculas"}
           >
-            <ListGroup.Item className={Styles.ListGroupItem}>
-              Curriculums
-            </ListGroup.Item>
+            Curriculums
           </Link>
 
           <Link
@@ -122,9 +120,7 @@ const Navbar = () => {
             className={Styles.Navlink}
             to={"/Documents"}
           >
-            <ListGroup.Item className={Styles.ListGroupItem}>
-              Documents
-            </ListGroup.Item>
+            Documents
           </Link>
 
           <Link
@@ -132,15 +128,11 @@ const Navbar = () => {
             className={Styles.Navlink}
             to={"/Updates"}
           >
-            <ListGroup.Item className={Styles.ListGroupItem}>
-              Updates
-            </ListGroup.Item>
+            Updates
           </Link>
 
           <a href={`Dog Water`} target={"_blank"} rel={"noreferrer"}>
-            <ListGroup.Item className={Styles.ListGroupItem}>
-              Grades
-            </ListGroup.Item>
+            Grades
           </a>
 
           <Link
@@ -148,9 +140,7 @@ const Navbar = () => {
             className={Styles.Navlink}
             to={"/Apply"}
           >
-            <ListGroup.Item className={Styles.ListGroupItem}>
-              Apply
-            </ListGroup.Item>
+            Apply
           </Link>
         </ListGroup>
 
