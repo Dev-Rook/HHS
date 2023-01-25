@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import useAxios from "../Hooks/useAxios";
 import Styles from "../Styles/Page-Section-Styles/Curriculas.module.scss";
 
 import SearchIcon from "@mui/icons-material/Search";
 
-import SkillsData from "../Data/Skills.json";
 
-const Skills = () => {
-  const [data, setData] = useState(SkillsData);
+const Curriculas = () => {
+  const url = `https://hhs-backen-76xny.ondigitalocean.app/curricula`;
+  const { data, error, loading } = useAxios(url);
   const [search, setSearch] = useState("");
 
   return (
     <div className={Styles.Section}>
       <div className={Styles.Section_Title}>
-        <p className={Styles.Question}>- Trade / Skills</p>
+        <p className={Styles.Question}></p>
         <p className={Styles.Brand}>
-          Practical Trades For Practical Industries
+          Browse Skills & Subjects
         </p>
       </div>
 
@@ -35,21 +35,22 @@ const Skills = () => {
             ?.filter((item) => {
               return search.toLowerCase() === ""
                 ? item
-                : item.Title.toLowerCase().includes(search) ;
+                : item.title.toLowerCase().includes(search) ;
             })
             .map((value) => {
             return (
               <Link to={"/Curricula/" + value.id} key={value.id}>
                 <div className={Styles.Card}>
                   <div className={Styles.Image_Container}>
-                    <p className={Styles.Category}>{value?.Title}</p>
+                    <p className={Styles.Category}>{value?.title}</p>
                     <img src={value.Image} alt="" className={Styles.Image} />
                   </div>
                   <div className={Styles.Information_Box}>
-                    <p className={Styles.Teacher}>{value?.Tutors[0].Name}</p>
+                    <p className={Styles.Teacher}>{value?.tutor[0].firstName}</p>
+                    {/* <p className={Styles.Teacher}>{value?.type}</p> */}
 
                     <p className={Styles.Description}>
-                      {value?.Description.slice(0, 130)}...
+                      {value?.description?.slice(0, 120)}...
                     </p>
                   </div>
                 </div>
@@ -61,4 +62,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Curriculas;

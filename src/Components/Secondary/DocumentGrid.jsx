@@ -71,7 +71,7 @@ const DocumentGrid = () => {
                     <div className={Styles.Information_Container}>
                       <p className={Styles.Title}>{value.title}</p>
                       <p className={Styles.Bio}>
-                        {value.description.slice(0, 120)}...
+                        {value.description?.slice(0, 120)}...
                       </p>
                     </div>
                   </div>

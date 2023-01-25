@@ -47,7 +47,7 @@ const Subjects = () => {
                     <p className={Styles.Teacher}>Teacher/s: {value?.tutor[0].firstName}</p>
 
                     <p className={Styles.Description}>
-                      {value?.description.slice(0, 130)}...
+                      {value?.description}...
                     </p>
                   </div>
                 </div>

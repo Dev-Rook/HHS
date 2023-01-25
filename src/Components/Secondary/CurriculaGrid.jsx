@@ -36,6 +36,7 @@ const CurriculaGrid = () => {
         <input
           type="text"
           placeholder="Search Skill"
+          autoCapitalize="none"
           className={Styles.Nav_Input}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -71,7 +72,7 @@ const CurriculaGrid = () => {
                     <div className={Styles.Information_Container}>
                       <p className={Styles.Title}>{value.title}</p>
                       <p className={Styles.Bio}>
-                        {value.description.slice(0, 120)}...
+                        {value.description?.slice(0, 120)}...
                       </p>
                     </div>
                   </div>
