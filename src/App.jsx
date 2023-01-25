@@ -7,15 +7,19 @@ import Footer from "./Components/Main/Footer";
 
 // Page import Start
 const Home = lazy(() => import("./Pages/Home"));
-const Curricula = lazy(() => import("./Pages/Curricula"));
+// const Curricula = lazy(() => import("./Pages/Curricula"));
 const Staff = lazy(() => import("./Pages/Staff"));
-const About = lazy(() => import("./Pages/About"));
+// const About = lazy(() => import("./Pages/About"));
 const Updates = lazy(() => import("./Pages/Updates"));
-const Documents = lazy(() => import("./Pages/Documents"));
+// const Documents = lazy(() => import("./Pages/Documents"));
 const Apply = lazy(() => import("./Pages/Apply"));
 const Fallback = lazy(() => import("./Pages/Fallback"));
 const Error = lazy(() => import("./Pages/Error"));
 // Page Import End
+
+import About from "./Pages/About";
+import Curricula from "./Pages/Curricula";
+import Documents from "./Pages/Documents";
 
 // Dynamic Page Imports Start
 const StaffSingle = lazy(() => import("./Dynamic-Pages/StaffSingle.jsx"));
