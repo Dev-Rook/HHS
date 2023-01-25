@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Styles from "../../Styles/Components-Styles/Timeline.module.scss";
+import Styles from "../../Styles/Components-Styles/Timeline.module.scss"
 
 // MUI Imports Start
 import Timeline from "@mui/lab/Timeline";
