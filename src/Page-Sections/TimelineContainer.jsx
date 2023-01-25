@@ -8,7 +8,7 @@ const TimelineContainer = () => {
   return (
     <div className={Styles.Section}>
       <div className={Styles.Section_Title_Container}>
-        <p className={Styles.Question}>School History</p>
+        <p className={Styles.Question}>-School History</p>
         <p className={Styles.Section_Title}>Our Timeline</p>
       </div>
 
